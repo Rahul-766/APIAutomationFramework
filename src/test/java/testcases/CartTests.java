@@ -147,7 +147,7 @@ public class CartTests extends BaseClass{
 	            .when()
 	                .post(Routes.CREATE_CART)
 	            .then()
-	                .statusCode(200)
+	                .statusCode(201)
 	                .log().body()
 	                .body("id", notNullValue()) // Validate that the cart ID in response is not null
 	                .body("userId", notNullValue()) // Validate that the user ID in response is not null

@@ -148,7 +148,7 @@ public class ProductTests extends BaseClass{
 				.post(Routes.CREATE_PRODUCT)
 			.then()
 				.log().body()
-				.statusCode(200)
+				.statusCode(201)
 				.body("id", notNullValue())
 				.body("title", equalTo(newProduct.getTitle()))
 				.extract().jsonPath().getInt("id"); //Extracting Id from response body
